@@ -27,3 +27,11 @@ spec:
     kind: Deployment
     jsonPointers:
     - /spec/replicas  
+  ignoreDifferences:
+  - group: apps
+    kind: Deployment
+    jsonPointers:
+    - /metadata/annotations/creation   
+  - kind: Secret
+    jsonPointers:
+      - /data/my-password     
